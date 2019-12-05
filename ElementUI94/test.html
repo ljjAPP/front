@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	</head>
+
+	<body>
+		<div id="app">
+			<el-input v-model="input" placeholder="请输入内容"></el-input>
+			{{input}}
+			<el-date-picker v-model="value1" type="datetime" placeholder="选择日期时间">
+			</el-date-picker>
+			{{value1}}
+		</div>
+	</body>
+	<!-- 先引入 Vue -->
+	<script src="js/vue.js"></script>
+	<!-- 引入组件库 -->
+	<script src="js/index.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				input: "",
+				value1: ""
+			}
+		})
+	</script>
+
+</html>
